@@ -314,7 +314,7 @@ class CrudTransaksi extends My_controller
         $hargaEcer = $getBarang['hargaBeliPaket'] / $getBarang['konversi'];
         $hargaAsli = $getBarang['hargaBeliPaket'];
       }
-      $cekTerbeli = $this->db->query("SELECT * FROM pembelian WHERE noBeli = '$noJual' AND kodeBarang = '$kodeBarang' AND bonus = 0 AND satuanAsli = '$satuanAsli'")->row_array();
+      $cekTerbeli = $this->db->query("SELECT * FROM pembelian WHERE noJual = '$noJual' AND kodeBarang = '$kodeBarang' AND bonus = 0 AND satuanAsli = '$satuanAsli'")->row_array();
 
       $data = array(
         'kodeBarang' => $kodeBarang,
