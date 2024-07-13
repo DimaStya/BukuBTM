@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      font-family: arial;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      margin: 50px auto;
+      border: 5px solid #333;
+      box-sizing: border-box;
+      padding: 5px;
+      display: grid;
+      grid-template-areas: 
+        "info harga harga"
+        "barang barang barang"
+        "tabel tabel tabel"
+        "keterangan potongan total"
+        "simpan kosong pending";
+
+      grid-template-columns: 1fr 1fr 1 fr;
+      grid-template-rows: 1fr 0.2fr 2fr 1fr 0.2fr;
+    }
+
+    .info {
+      grid-area: info;
+      border: 2px solid #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .harga {
+      grid-area: harga;
+      border: 2px solid #333;
+    }
+
+    .barang {
+      grid-area: barang;
+      border: 2px solid #333;
+    }
+
+    .tabel {
+      grid-area: tabel;
+      border: 2px solid #333;
+    }
+
+    .keterangan {
+      grid-area: keterangan;
+      border: 2px solid #333;
+    }
+    .potongan {
+      grid-area: potongan;
+      border: 2px solid #333;
+    }
+    .total {
+      grid-area: total;
+      border: 2px solid #333;
+    }
+    .simpan {
+      grid-area: simpan;
+      border: 2px solid #333;
+    }
+    .pending {
+      grid-area: pending;
+      border: 2px solid #333;
+    }
+    .kosong {
+      grid-area: kosong;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="info">info</div>
+    <div class="harga">harga</div>
+    <div class="barang">barang</div>
+    <div class="tabel">tabel</div>
+    <div class="keterangan">keterangan</div>
+    <div class="potongan">potongan</div>
+    <div class="total">total</div>
+    <div class="simpan">simpan</div>
+    <div class="kosong">kosong</div>
+    <div class="pending">pending</div>
+    
+  </div>
+</body>
+
+</html>
